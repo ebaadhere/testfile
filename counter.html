@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="increment-count">
+            <input type="image" id="up-arrow " src="./arrow-removebg-preview.png">
+        </div>
+        <div id="total-count">
+
+        </div>
+        <div id="decrement-count">
+            <input type="image" id="down-arrow " src="./arrow11-removebg-preview.png">
+        </div>
+    </div>
+    <script>
+  const incrementCount = document.getElementById("increment-count")
+  const decrementCount = document.getElementById("decrement-count")
+  const totalCount = document.getElementById("total-count")
+  let count = 0;
+
+
+  totalCount.innerHTML = count;
+
+  const handleIncrement = () => {
+    count++;
+    totalCount.innerHTML = count;
+  };
+
+  const handleDecrement = () => {
+    count--;
+    totalCount.innerHTML = count;
+  };
+
+  incrementCount.addEventListener("click", handleIncrement);
+  decrementCount.addEventListener("click", handleDecrement);
+  
+    </script>
+</body>
+</html>

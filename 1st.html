@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Horia</h1>
+       <!-- object is  structure data -->
+       <!-- for loop i = counter variable -->
+    <script>
+       let obj = {
+            "student":[
+           {"id":"33","Name":"Horia","age":17},
+          {"id":"32","Name":"Faiza","age":18},
+            {"id":"34","Name":"rukaiya","age":19}
+          ]
+       }
+for(let key in obj.student){
+  for(let value in obj.student[key]){
+        document.write(obj.student[key][value])
+    }
+    document.write("<br>")
+}
+
+//document.write(obj)
+//let ob = JSON.stringify(obj)
+
+//document.write(obj)
+
+
+
+///let str ='{"id":"33","Name":"Horia"}'
+//let string =JSON.parse(str)
+//document.write(string.id +""+ string.Name)
+
+
+
+///let Ali = {
+   /// "marks" : [530]
+///}
+//for (let i = 0; i < Ali.marks; i++) {
+   // console.log(Ali.marks);
+    
+//}
+
+
+
+
+
+    </script>
+</body>
+</html>

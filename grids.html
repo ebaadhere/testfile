@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 80vw;
+            display: grid;
+            grid-template-rows: 200px 200px 200px;
+            grid-template-columns: 1fr 1fr 1fr;
+         grid-template-areas: 'item-1 item-1 item-1'
+                              'item-2 item-3 item-4'
+                              'item-2 item-5 item-4'
+                              'item-6 item-6 item-6';
+        }
+        .item-1{
+            grid-area: item-1;
+            background-color: red;
+        }
+        .item-2{
+            grid-area: item-2;
+            background-color: rgb(170, 148, 24);
+        }
+        .item-3{
+            grid-area: item-3;
+            background-color: rgb(150, 8, 185);
+        }
+        .item-4{
+            grid-area: item-4;
+            background-color: rgb(10, 245, 186);
+        }
+        .item-5{
+            grid-area: item-5;
+            background-color: rgb(9, 41, 221);
+        } .item-6{
+            grid-area: item-6;
+            background-color: rgb(252, 9, 199);
+        }
+      .color{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+        font-size: large;
+      }
+      @media screen and (max-width:580px){
+        .container{
+            grid-template-rows: 200px 200px 200px;
+            grid-template-columns: 1fr;
+         grid-template-areas: 'item-1 '
+                              'item-2'
+                              'item-3'
+                              'item-4'
+                              'item-5'
+                              'item-6';
+        }
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item-1 color"><h1>Header</h1></div>
+        <div class="item-2 color"><h1>Dashboard</h1></div>
+        <div class="item-3 color"><h1>Cards</h1></div>
+        <div class="item-4 color"><h1>SideBars</h1></div>
+        <div class="item-5 color"><h1>Card</h1></div>
+        <div class="item-6 color"><h1>Footer</h1></div>
+    </div>
+</body>
+</html>

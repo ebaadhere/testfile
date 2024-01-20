@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar to Rupee Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.converter {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.converter input {
+    width: 100px;
+    margin: 10px 0;
+}
+
+</style>
+<body>
+
+<div class="converter">
+    <h2>Dollar to Rupee Converter</h2>
+    <label for="dollars">Dollars:</label>
+    <input type="number" id="dollars" oninput="convertToRupees()">
+    
+    <label for="rupees">Rupees:</label>
+    <input type="number" id="rupees" readonly>
+</div>
+
+<script>
+    function convertToRupees() {
+    let dollarsInput = document.getElementById('dollars');
+    let rupeesInput = document.getElementById('rupees');
+
+    let dollars = parseFloat(dollarsInput.value);
+    // You can use any exchange rate to convert one Dollar to Rupees, depending on your needs.
+    let exchangeRate = 278.22; // Example rate
+    let rupees = dollars * exchangeRate;
+
+    rupeesInput.value = rupees.toFixed(2);
+}
+
+</script>
+</body>
+</html>
